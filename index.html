@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POC Fetch API</title>
+</head>
+<body>
+    <h1>Lista de Produtos</h1>
+    <ul id="products-list"></ul>
+
+    <script>
+        async function fetchProducts() {
+            const response = await fetch('https://dummyjson.com/products');
+            const data = await response.json();
+            const productList = document.getElementById('products-list');
+            
+            data.products.forEach(product => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${product.title} - $${product.price}`;
+                productList.appendChild(listItem);
+            });
+        }
+
+        fetchProducts();
+    </script>
+</body>
+</html>

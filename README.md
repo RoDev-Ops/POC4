@@ -1,3 +1,5 @@
+Rodrigo Mello 10409316
+
 ## POC - Fetch API com JavaScript
 
 Esta Prova de Conceito (POC) demonstra o uso do método assíncrono fetch para buscar dados de uma API pública e exibi-los em uma página HTML. A API utilizada é a <a href="https://dummyjson.com/products">dummyjson/products</a>, que retorna uma lista de produtos com várias informações associadas.
